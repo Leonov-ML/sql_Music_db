@@ -6,7 +6,7 @@ CREATE TABLE Performers (
 CREATE TABLE Albums (
 	id SERIAL PRIMARY KEY,
 	Title varchar(50) NOT NULL,
-	Year integer NOT null,
+	Year integer NOT null
 );
 
 CREATE TABLE album_Performers (
