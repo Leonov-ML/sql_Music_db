@@ -49,7 +49,7 @@ performers_album_not_in_20 = connection.execute('''
 print(f'Все исполнители, которые не выпустили альбомы в 2020 году: {performers_album_not_in_20}')
 
 # названия сборников, в которых присутствует конкретный исполнитель (выберите сами);
-Name_in_collection = connection.execute('''
+name_in_collection = connection.execute('''
     SELECT DISTINCT c.title
     FROM Collections c
     JOIN Song_collection sc ON c.id = sc.collection_id
@@ -60,7 +60,7 @@ Name_in_collection = connection.execute('''
     WHERE p.name LIKE 'Nirvana'
     ''').fetchall()
 
-print(f'Названия сборников, в которых присутствует конкретный исполнитель ("Nirvana"): {Name_in_collection}')
+print(f'Названия сборников, в которых присутствует конкретный исполнитель ("Nirvana"): {name_in_collection}')
 
 # название альбомов, в которых присутствуют исполнители более 1 жанра;
 album_many_styles = connection.execute('''
